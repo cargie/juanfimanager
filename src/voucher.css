@@ -1,0 +1,163 @@
+@media print {
+    @page {
+        size: 215.9mm 279.4mm !important;
+        margin: 5mm !important;
+    }
+
+    #printBtn {
+        display: none;
+    }
+
+    #clearBtn {
+        display: none;
+    }
+
+    .pagebreak {
+        clear: both;
+        page-break-after: right;
+    }
+
+}
+
+body {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Anonymous Pro;
+padding: 0;
+    margin: 0;
+}
+
+.parent-div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.voucher-template {
+    width: 35mm;
+    height: max-content;
+    border: 2px solid #485460;
+    /*width: 300px;
+    height: 150px;*/
+    border-radius: 0px;
+    margin: 0;
+    padding: 2px 0 2px 2px;
+    float: left;
+}
+
+.vendo-name {
+    font-size: 12px;
+}
+
+/*.column {
+    float: left;
+    width: 20.1%;
+    padding: 1 0px;
+}*/
+
+/*.voucher-wrapper {
+    border: 2px dotted #485460;
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+}*/
+
+.voucher-container {
+    /* padding: 2px 2px; */
+}
+
+.voucher-title {
+    display: block;
+    text-align: center;
+    padding: 0px;
+    color: #ff7f50;
+    margin: 0;
+}
+
+.dns {
+    text-align: center;
+    font-size: 8px;
+    display: block;
+}
+
+.column-1 {
+    float: left;
+    width: 0%;
+    display: table-column;
+}
+
+.column-2 {
+    float: right;
+    width: 99%;
+    display: table-column;
+}
+
+hr {
+    border: 2px solid #485460;
+}
+
+.qr-wrapper {
+    margin-top: 7px;
+}
+
+.qr-scan {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 8px;
+    /*writing-mode: vertical-rl;
+    text-orientation: mixed;*/
+}
+
+.qr-img {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.voucher-code {
+    text-transform: uppercase;
+    font-size: 12px !important;
+}
+
+.voucher-code-key {
+    font-size: 12px !important;
+}
+
+.dtls {
+    margin-top: 0px;
+}
+
+.dtl-col1 {
+    font-size: 10px;
+    float: left;
+    width: 40%;
+    display: table-column;
+}
+
+.dtl-col2 {
+    font-size: 10px;
+    float: right;
+    width: 60%;
+    display: table-column;
+}
+
+.dtl-row {
+    padding: 1px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.info {
+    font-size: 13px;
+}
+
+.hide {
+    display: none;
+}
