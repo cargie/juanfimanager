@@ -146,21 +146,21 @@ if ($API->connect(MT_SERVER, MT_USERNAME, MT_PASSWORD, MT_PORT)) {
             <div class="mb-3 row ">
                 <div class="col input-group">
                     <div class="w-100">
-                        <label class="form-label fw-bold" for="Duration">Voucher Duration
+                        <label class="form-label fw-bold" for="Limit">Voucher Limit
                             <label>
                     </div>
-                    <input class="col form-control" type="number" size="4" placeholder="Days" autocomplete="off" name="durD" value="<?php echo ((int)$_POST['durD']); ?>">
-                    <input class="col form-control" type="number" size="4" placeholder="Hours" autocomplete="off" name="durH" value="<?php echo ((int)$_POST['durH']); ?>">
-                    <input class="col form-control" type="number" size="4" placeholder="Minutes" autocomplete="off" name="durM" value="<?php echo ((int)$_POST['durM']); ?>">
+                    <input class="col form-control" type="number" size="4" placeholder="Days" autocomplete="off" name="limD" value="<?php echo ((int)$_POST['limD']); ?>">
+                    <input class="col form-control" type="number" size="4" placeholder="Hours" autocomplete="off" name="limH" value="<?php echo ((int)$_POST['limH']); ?>" v>
+                    <input class="col form-control" type="number" size="4" placeholder="Minutes" autocomplete="off" name="limM" value="<?php echo ((int)$_POST['limM']); ?>">
                 </div>
                 <div class="col input-group">
                     <div class="w-100">
                         <label class="form-label fw-bold" for="Duration">Voucher Validity
                             <label>
                     </div>
-                    <input class="col form-control" type="number" size="4" placeholder="Days" autocomplete="off" name="limD" value="<?php echo ((int)$_POST['limD']); ?>">
-                    <input class="col form-control" type="number" size="4" placeholder="Hours" autocomplete="off" name="limH" value="<?php echo ((int)$_POST['limH']); ?>" v>
-                    <input class="col form-control" type="number" size="4" placeholder="Minutes" autocomplete="off" name="limM" value="<?php echo ((int)$_POST['limM']); ?>">
+                    <input class="col form-control" type="number" size="4" placeholder="Days" autocomplete="off" name="durD" value="<?php echo ((int)$_POST['durD']); ?>">
+                    <input class="col form-control" type="number" size="4" placeholder="Hours" autocomplete="off" name="durH" value="<?php echo ((int)$_POST['durH']); ?>">
+                    <input class="col form-control" type="number" size="4" placeholder="Minutes" autocomplete="off" name="durM" value="<?php echo ((int)$_POST['durM']); ?>">
                 </div>
             </div>
 
