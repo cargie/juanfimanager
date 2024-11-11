@@ -277,7 +277,7 @@ if ($API->connect(MT_SERVER, MT_USERNAME, MT_PASSWORD, MT_PORT)) {
                                         </div>
                                         <div class="dtl-row"><span class="voucher-amt voucher-dtl">' . $CURRENCY . ' ' . money_format('%.2n', $price) . '</span>
                                         </div>
-                                        <div class="dtl-row"><span class="voucher-duration voucher-dtl"> ' . secondsToDhms($duration * 60) . ' </span>
+                                        <div class="dtl-row"><span class="voucher-duration voucher-dtl"> ' . secondsToDhms($timelimit) . ' </span>
                                         </div>
                                     </div>
                                     <div class="dns">
