@@ -23,7 +23,7 @@ $pppoeActive = $API->comm("/ppp/active/print", array("count-only" => ""));
 $pppoeUsers = $API->comm("/ppp/secret/print", array("count-only" => ""));
 
 $getpMonthly = $API->comm("/system/script/print", array("?name" => "pppoemonthlyincome"));
-$monthlyPSales = $getpMonthly['0'];
+$monthlyPSales = 0;//$getpMonthly['0'];
 
 //get sales
 $getMonthly = $API->comm("/system/script/print", array("?name" => "monthlyincome"));
