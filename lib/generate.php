@@ -239,6 +239,8 @@ if ($API->connect(MT_SERVER, MT_USERNAME, MT_PASSWORD, MT_PORT)) {
 
             $date = new DateTime();
 
+            $dateprinted = $date->format('Y-m-d H:i:s');
+
             $fp = fopen("vouchers/{$vendo}_{$price}_{$qty}pcs_{$date->format('m')}_{$date->format('d')}_{$date->format('Y')}.csv", 'w');
 
             for ($i = 1; $i <= $qty; $i++) {
@@ -254,7 +256,7 @@ if ($API->connect(MT_SERVER, MT_USERNAME, MT_PASSWORD, MT_PORT)) {
                     "profile" => "$profile",
                     "limit-uptime" => "$timelimit",
                     "limit-bytes-total" => "$datalimit",
-                    "comment" => $duration . "m," . $price . ",0," . $vendo,
+                    "comment" => $duration . "m," . $price . ",0," . $vendo . ',' . $dateprinted,
                 ));
 
                 fputcsv($fp, [$vc, $price]);
