@@ -353,12 +353,12 @@ if ($API->connect(MT_SERVER, MT_USERNAME, MT_PASSWORD, MT_PORT)) {
             var o = document.getElementById("PrintBody").innerHTML,
                 n = window.open("", "", "height=800, width=800")
             n.document.write(`
-                <link href="src/voucher.css?vax" rel=stylesheet>
+                <link href="src/voucher.css?v3" rel=stylesheet>
                 <link rel="preconnect" href="https://fonts.googleapis.com">
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                 <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
             `), setTimeout(function() {
-                n.document.write("<html><body id='voucherList' class='parent-div'><title>" + t + "</title>" + o + "</body></html>"), n.print()
+                n.document.write("<html><title>" + t + "</title><body><div id='voucherList' class='parent-div'>" + o + "</div></body></html>"), n.print()
             }, 100)
         }
     }
