@@ -92,7 +92,7 @@ if ($API->connect(MT_SERVER, MT_USERNAME, MT_PASSWORD, MT_PORT)) {
                                 <select class="form-select" id="userl" name="userl" required="1">
                                     <option value="6">6</option>
                                     <option value="7">7</option>
-                                    <option selected value="8">8</option>
+                                    <option value="8" selected>8</option>
                                     <option value="9">9</option>
                                     <option value="10">10</option>
                                 </select>
@@ -149,18 +149,18 @@ if ($API->connect(MT_SERVER, MT_USERNAME, MT_PASSWORD, MT_PORT)) {
                         <label class="form-label fw-bold" for="Limit">Voucher Limit
                             <label>
                     </div>
-                    <input class="col form-control" type="number" size="4" placeholder="Days" autocomplete="off" name="limD" value="<?php echo ((int)$_POST['limD']); ?>">
-                    <input class="col form-control" type="number" size="4" placeholder="Hours" autocomplete="off" name="limH" value="<?php echo ((int)$_POST['limH']); ?>" v>
-                    <input class="col form-control" type="number" size="4" placeholder="Minutes" autocomplete="off" name="limM" value="<?php echo ((int)$_POST['limM']); ?>">
+                    <input class="col form-control" type="number" size="4" min=0 placeholder="Days" autocomplete="off" name="limD" value="<?php echo ((int)$_POST['limD']); ?>">
+                    <input class="col form-control" type="number" size="4" min=0 placeholder="Hours" autocomplete="off" name="limH" value="<?php echo ((int)$_POST['limH']); ?>" v>
+                    <input class="col form-control" type="number" size="4" min=0 placeholder="Minutes" autocomplete="off" name="limM" value="<?php echo ((int)$_POST['limM']); ?>">
                 </div>
                 <div class="col input-group">
                     <div class="w-100">
                         <label class="form-label fw-bold" for="Duration">Voucher Validity
                             <label>
                     </div>
-                    <input class="col form-control" type="number" size="4" placeholder="Days" autocomplete="off" name="durD" value="<?php echo ((int)$_POST['durD']); ?>">
-                    <input class="col form-control" type="number" size="4" placeholder="Hours" autocomplete="off" name="durH" value="<?php echo ((int)$_POST['durH']); ?>">
-                    <input class="col form-control" type="number" size="4" placeholder="Minutes" autocomplete="off" name="durM" value="<?php echo ((int)$_POST['durM']); ?>">
+                    <input class="col form-control" type="number" size="4" min=0 value=2 placeholder="Days" autocomplete="off" name="durD" value="<?php echo ((int)$_POST['durD']); ?>">
+                    <input class="col form-control" type="number" size="4" min=0 placeholder="Hours" autocomplete="off" name="durH" value="<?php echo ((int)$_POST['durH']); ?>">
+                    <input class="col form-control" type="number" size="4" min=0 placeholder="Minutes" autocomplete="off" name="durM" value="<?php echo ((int)$_POST['durM']); ?>">
                 </div>
             </div>
 
@@ -317,7 +317,7 @@ if ($API->connect(MT_SERVER, MT_USERNAME, MT_PASSWORD, MT_PORT)) {
     $("#userl").val("<?php if (isset($_POST['userl'])) {
                             echo ($_POST['userl']);
                         } else {
-                            echo "6";
+                            echo "8";
                         } ?>");
     $("#char").val("<?php if (isset($_POST['char'])) {
                         echo ($_POST['char']);
