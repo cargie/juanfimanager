@@ -358,7 +358,7 @@ if ($API->connect(MT_SERVER, MT_USERNAME, MT_PASSWORD, MT_PORT)) {
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
                 <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
             `), setTimeout(function() {
-                n.document.write("<html><body id='voucherList' class='parent-div'><title>" + t + "</title>" + o + "</body></html>"), n.print()
+                n.document.write("<html><title>" + t + "</title><body><div id='voucherList' class='parent-div'>" + o + "</div></body></html>"), n.print()
             }, 100)
         }
     }
