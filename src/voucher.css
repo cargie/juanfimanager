@@ -119,11 +119,11 @@ hr {
 
 .voucher-code {
     text-transform: uppercase;
-    font-size: 16px !important;
+    font-size: 15px !important;
 }
 
 .voucher-code-key {
-    font-size: 16px !important;
+    font-size: 15px !important;
 }
 
 .dtls {
@@ -131,14 +131,14 @@ hr {
 }
 
 .dtl-col1 {
-    font-size: 10px;
+    font-size: 11px;
     float: left;
     width: 40%;
     display: table-column;
 }
 
 .dtl-col2 {
-    font-size: 10px;
+    font-size: 11px;
     float: right;
     width: 60%;
     display: table-column;
