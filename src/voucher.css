@@ -19,13 +19,7 @@
 
 }
 
-@font-face {
-    font-family: 'Anonymous Pro';
-    src: URL('AnonymousPro-Regular.ttf') format('truetype');
-}
-
 body {
-    /* font-family: Arial, Helvetica, sans-serif; */
     font-family: Anonymous Pro;
     padding: 0;
     margin: 0;
