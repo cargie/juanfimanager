@@ -218,21 +218,21 @@ if ($API->connect(MT_SERVER, MT_USERNAME, MT_PASSWORD, MT_PORT)) {
             $API->comm("/system/scheduler/add", array("name" => "Reset " . $vendo . " Income", "interval" => "1d", "on-event" => ":local getVendorScript [/system script get [find name=" . $vendo . "] comment];:local vendorArray [:toarray [:pick \$getVendorScript ([:find \$getVendoScript \",\"]) [:len \$getVendorScript]]];:local getLastSales [:pick \$vendorArray 1];/system script set [find name=" . $vendo . "] comment=\"VendoSales,0,\$getLastSales\";", "start-date" => "sep/01/2022", "start-time" => "00:00:00"));
             for ($i = 1; $i <= $qty; $i++) {
                 if ($char == "1") {
-                    $u[$i] = substr(str_shuffle("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"), -$userl);
+                    $u[$i] = substr(str_shuffle("23456789ABCDEFGHJKLMNPQRSTUVWXYZ"), -$userl);
                 } elseif ($char == "2") {
                     $u[$i] = substr(str_shuffle("abcdefghijklmnopqrstuvwxyz"), -$userl);
                 } elseif ($char == "3") {
                     $u[$i] = substr(str_shuffle("0123456789"), -$userl);
                 } elseif ($char == "4") {
-                    $u[$i] = substr(str_shuffle("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"), -$userl);
+                    $u[$i] = substr(str_shuffle("ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"), -$userl);
                 } elseif ($char == "5") {
-                    $u[$i] = substr(str_shuffle("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"), -$userl);
+                    $u[$i] = substr(str_shuffle("ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz23456789"), -$userl);
                 } elseif ($char == "6") {
-                    $u[$i] = substr(str_shuffle("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"), -$userl);
+                    $u[$i] = substr(str_shuffle("ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz23456789"), -$userl);
                 } elseif ($char == "7") {
-                    $u[$i] = substr(str_shuffle("ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%&"), -$userl);
+                    $u[$i] = substr(str_shuffle("ABCDEFGHJKLMNPQRSTUVWXYZ!@#$%&"), -$userl);
                 } elseif ($char == "8") {
-                    $u[$i] = substr(str_shuffle("ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%&1234567890"), -$userl);
+                    $u[$i] = substr(str_shuffle("ABCDEFGHJKLMNPQRSTUVWXYZ!@#$%&23456789"), -$userl);
                 }
                 $u[$i] = strtoupper($prefix) . "$u[$i]";
             }
