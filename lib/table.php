@@ -35,6 +35,11 @@ for ($i = 0; $i < count($sellers); $i++) {
         $Vname = $Vname . '"' . $sellers[$i]['name'] . '",';
     }
 }
+
+usort($sellers, function ($a, $b) {
+    return $a['source'] <=> $b['source'];
+});
+
 ?>
 <div class="row">
     <div>
