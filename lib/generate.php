@@ -112,8 +112,8 @@ if ($API->connect(MT_SERVER, MT_USERNAME, MT_PASSWORD, MT_PORT)) {
                             <label class="form-label fw-bold">Type</label>
                             <div class="col">
                                 <select class="form-select" onchange="defUserl();" id="user" name="user" required="1">
-                                    <option selected value="vc">Username = Password</option>
-                                    <option value="up">Username Only</option>
+                                    <option value="vc">Username = Password</option>
+                                    <option selected value="up">Username Only</option>
                                 </select>
                             </div>
                         </div>
@@ -241,7 +241,7 @@ if ($API->connect(MT_SERVER, MT_USERNAME, MT_PASSWORD, MT_PORT)) {
 
             $dateprinted = $date->format('Y-m-d H:i:s');
 
-            $fp = fopen("vouchers/{$vendo}_{$price}_{$qty}pcs_{$date->format('m')}_{$date->format('d')}_{$date->format('Y')}.csv", 'w');
+            $fp = fopen("vouchers/{$vendo}_{$price}_{$qty}pcs_{$date->format('m')}_{$date->format('d')}_{$date->format('Y')}_{$date->format('H-i-s')}.csv", 'wr');
 
             for ($i = 1; $i <= $qty; $i++) {
                 if ($user == "up") {
@@ -259,7 +259,7 @@ if ($API->connect(MT_SERVER, MT_USERNAME, MT_PASSWORD, MT_PORT)) {
                     "comment" => $duration . "m," . $price . ",0," . $vendo . ',' . $dateprinted,
                 ));
 
-                fputcsv($fp, [$vc, $price]);
+                fputcsv($fp, [$u[$i], $price]);
 
                 echo '<div class="voucher-template">
                     <div class="voucher-coupon voucher-wrapper column">
@@ -275,7 +275,7 @@ if ($API->connect(MT_SERVER, MT_USERNAME, MT_PASSWORD, MT_PORT)) {
                                         <div class="dtl-row">Duration:</div>
                                     </div>
                                     <div class="dtl-col2">
-                                        <div class="dtl-row"><span class="voucher-code voucher-dtl">' . $vc . '</span>
+                                        <div class="dtl-row"><span class="voucher-code voucher-dtl">' . $u[$i] . '</span>
                                         </div>
                                         <div class="dtl-row"><span class="voucher-amt voucher-dtl">' . $CURRENCY . ' ' . money_format('%.2n', $price) . '</span>
                                         </div>
@@ -312,7 +312,7 @@ if ($API->connect(MT_SERVER, MT_USERNAME, MT_PASSWORD, MT_PORT)) {
     $("#user").val("<?php if (isset($_POST['user'])) {
                         echo ($_POST['user']);
                     } else {
-                        echo "vc";
+                        echo "up";
                     } ?>");
     $("#userl").val("<?php if (isset($_POST['userl'])) {
                             echo ($_POST['userl']);
